@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Tienda online</h1>
+  <ul>
+    {% for vehiculo in vehiculos %}
+      <li>{{ vehiculo.marca }} {{ vehiculo.modelo }} ({{ vehiculo.anio }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

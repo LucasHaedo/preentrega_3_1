@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aston Martin Racing (AMR)</title>
+    </head>
+    <body>
+        <header>
+            <h1>Aston Martin Racing (AMR)</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'cargar_vehiculo' %}">Cargar vehículo</a></li>
+                <li><a href="{% url 'cargar_cliente' %}">Cargar cliente</a></li>
+                <li><a href="{% url 'tienda_online' %}">Tienda online</a></li>
+                <li><a href="{% url 'historia_empresa' %}">Historia de la empresa</a></li>
+            </ul>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+            <p>© 2023 Aston Martin Racing (AMR)</p>
+        </footer>
+    </body>
+</html>
