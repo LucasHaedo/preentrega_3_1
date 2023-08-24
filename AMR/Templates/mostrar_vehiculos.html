@@ -7,13 +7,8 @@
       <li>
         <img src="{{ vehiculo.imagen.url }}" alt="{{ vehiculo.marca }} {{ vehiculo.modelo }}">
         {{ vehiculo.marca }} {{ vehiculo.modelo }} ({{ vehiculo.anio }})
-        Precio: {{ vehiculo.precio }}
-        <form method="post" action="{% url 'comprar' vehiculo.id %}">
-          {% csrf_token %}
-          <button type="submit">Comprar</button>
-        </form>
+        <a href="{% url 'comprar' vehiculo.id %}">Comprar</a>
       </li>
     {% endfor %}
   </ul>
 {% endblock %}
-

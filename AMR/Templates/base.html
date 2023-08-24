@@ -12,10 +12,17 @@
                 <li><a href="{% url 'index' %}">Inicio</a></li>
                 <li><a href="{% url 'cargar_vehiculo' %}">Cargar vehículo</a></li>
                 <li><a href="{% url 'cargar_cliente' %}">Cargar cliente</a></li>
-                <li><a href="{% url 'tienda_online' %}">Tienda online</a></li>
+                <li><a href="{% url 'mostrar_vehiculos' %}">Tienda online</a></li>
                 <li><a href="{% url 'historia_empresa' %}">Historia de la empresa</a></li>
             </ul>
-        </nav>
+        </nav> 
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
         {% block content %}
         {% endblock %}
@@ -25,3 +32,6 @@
         </footer>
     </body>
 </html>
+
+
+
